@@ -53,5 +53,44 @@ curl --location --request POST 'https://api.bigcommerce.com/stores/{STORE HASH}/
 
 ### TODO
 ```
-Setup a Twilio account and register for a phone number
+Setup a Twilio account and register for a phone number (free)
+Setup a Twilio Service in the "Functions" section of Twilio
+Add a function to the Twilio Service 
+Set the "Function" to "public"
+```
+
+### Twilio Function Code
+```
+
+// This is your new function. To start, set the name and path on the left.
+
+exports.handler = function(context, event, callback) {
+  
+  const twilioClient = context.getTwilioClient();
+
+  //This is where the webhook is going to send the event data
+  console.log('BigCommerce OrderID: ', context);
+  console.log('Event', event);
+  
+  //Make this your Twilio, SMS capable, phone number
+   let from = '+19285638218';
+  // If passing in To, make sure to validate, to avoid sending SMS to unexpected locations, also replace with your number
+  let to = event.number || '+12813308004';
+  let body = 'Thanks for your order!';
+  twilioClient.messages
+    .create({
+      body: body,
+      to: to,
+      from: from,
+    })
+    .then((message) => {
+      console.log('SMS successfully sent');
+      console.log(message.sid);
+      return callback(null, 'success');
+    })
+    .catch((error) => {
+      console.log(error);
+      return callback(error);
+    });
+};
 ```
