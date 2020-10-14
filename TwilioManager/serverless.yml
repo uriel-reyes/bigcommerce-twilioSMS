@@ -1,0 +1,16 @@
+service: aws-nodejs
+provider:
+  name: aws
+  runtime: nodejs10.x
+functions:
+  twilioManager:
+    handler: handler.twilioManager
+    environment:
+      STORE_HASH: 
+      BC_CLIENT: 
+      BC_TOKEN: 
+    events:
+      - http: 
+          path: twilioManager
+          method: post
+          cors: true
