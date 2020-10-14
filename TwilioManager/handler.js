@@ -32,6 +32,7 @@ module.exports.twilioManager = async event => {
     const orderData = await getOrderData(data.data.orderId);
     console.log("twilio", `https://bigcommerce-9819.twil.io/order_sms?number=${orderData.billing_address.phone}`)
 
+//update uri to include your function's url
 //send to twilio like this https://bigcommerce-9819.twil.io/order_sms?number=281-330-8004
 const options = {
   method: "GET",

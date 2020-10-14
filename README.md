@@ -34,6 +34,14 @@ environment:
   BC_TOKEN: {BC TOKEN ID}
 
 ```
+And your AWS Path:
+```
+ events:
+      - http: https://ZZZZZ.execute-api.us-east-1.amazonaws.com/dev/bigcommerceTwilioSMS
+          path: twilioManager
+          method: post
+          cors: true
+```
 
 
 Now in postman create the webhook to send order created to endpoints
