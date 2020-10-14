@@ -3,7 +3,7 @@
 The application is using BigCommerce webhooks to send Order data to a serverless function to trigger an SMS notification using Twilio functions.
 
 ## Contributing
-George FitzGibbons
+George FitzGibbons (@gje4)
 
 Uriel Reyes
 
