@@ -59,7 +59,7 @@ curl --location --request POST 'https://api.bigcommerce.com/stores/{STORE HASH}/
 ```
 
 
-### TODO
+### Twilio Setup
 ```
 Setup a Twilio account and register for a phone number (free)
 Setup a Twilio Service in the "Functions" section of Twilio
