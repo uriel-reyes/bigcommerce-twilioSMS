@@ -15,6 +15,15 @@ You will need to have +v10 node.
 
 You will need Serverless
 
+Run the follwing (MacOs):
+
+```curl -o- -L https://slss.io/install | bash```
+or
+```curl -o- -L https://slss.io/install | zsh```
+depending on your OS
+```npm install```
+```npm install node-bigcommerce```
+
 ```https://serverless.com/
 
 In this example the serverless.yml is configured for AWS.
