@@ -18,10 +18,15 @@ You will need Serverless
 Run the follwing (MacOs):
 
 ```curl -o- -L https://slss.io/install | bash```
+
 or
+
 ```curl -o- -L https://slss.io/install | zsh```
-depending on your OS
+
+depending on your kernel
+
 ```npm install```
+
 ```npm install node-bigcommerce```
 
 ```https://serverless.com/
